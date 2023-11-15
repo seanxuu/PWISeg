@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="PWISeg: Point-based Weakly-supervised Instance Segmentation for Surgical Instruments">
+  <meta name="keywords"
+    content="Surgical Instrument Dataset, Point-based Instance Segmentation, Weakly Supervised, Key Pixel">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PWISeg: Point-based Weakly-supervised Instance Segmentation for Surgical Instruments</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y01RSXZNZP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-Y01RSXZNZP');
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://www.cair-cas.org.hk">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
+        </a>
+      </div>
+
+    </div>
+  </nav>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">PWISeg: Point-based Weakly-supervised Instance Segmentation for
+              Surgical Instruments</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="mailto:zhen.sun@cair-cas.org.hk">Zhen SUN</a><sup></sup>,</span>
+              <span class="author-block">
+                <a href="https://seanxuu.github.io/">Huan XU</a><sup></sup>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com.hk/citations?user=XujjZmUAAAAJ&hl=zh-CN">Jinlin Wu</a><sup></sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://franciszchen.github.io/">Zhen Chen</a><sup></sup>,
+              </span>
+              <span class="author-block">
+                <a href="http://www.cbsr.ia.ac.cn/users/zlei/">Zhen Lei</a><sup></sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://kclhammerlab.com/">Hongbin Liu</a><sup></sup>
+              </span>
+
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup> </sup> Centre for Artificial Intelligence and Robotics, Hong Kong
+                Institute
+                of Science & Innovation<br>Chinese Academy of Sciences</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="?????" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="?????" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Dataset Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/seanxuu/PWISeg" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="far fa-images"></i>
+                    </span>
+                    <span>Data</span>
+                  </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="./static/images/framework.jpg" alt="teaser" width="100%">
+        <br><br>
+        <h2 class="subtitle has-text-centered">
+          <span class="PWISeg">PWISeg: </span>Illustration of the basic framework.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              In surgical procedures, correct instrument counting is essential. Instance segmentation is a key method
+              that identifies not only an object's bounding box but also each pixel's specific details. However,
+              obtaining mask-level annotations is labor-intensive in instance segmentation. To address this issue, we
+              propose a novel yet effective weakly-supervised surgical instrument instance segmentation approach, named
+              Point-based Weakly-supervised Instance Segmentation (PWISeg). PWISeg adopts an FCN-based architecture with
+              point-to-box and point-to-mask branches to model the relationships between feature points and bounding
+              boxes, as well as feature points and segmentation masks on FPN, accomplishing instrument detection and
+              segmentation tasks jointly in a single model. Since mask level annotations are hard to available in the
+              real world, for point-to-mask training, we introduce an unsupervised projection loss, utilizing the
+              projected relation between predicted masks and bboxes as supervision signal. On the other hand, we
+              annotate a few pixels as the key pixel for each instrument. Based on this, we further propose a key pixel
+              association loss and a key pixel distribution loss, driving the point-to-mask branch to generate more
+              accurate segmentation predictions.
+
+            </p>
+            <p>
+              To comprehensively evaluate this task, we unveil a novel surgical instrument dataset with manual
+              annotations, setting up a benchmark for further research.
+            </p>
+            <p>
+              Our comprehensive research trial validated the superior performance of our PWISeg. The results show that
+              the accuracy of surgical instrument segmentation is improved, surpassing most methods of instance
+              segmentation via weakly supervised bounding boxes. This improvement is consistently observed in our
+              proposed dataset and when applied to the public HOSPI-Tools dataset.
+            </p>
+
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+      <!-- Dataset -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-centere">
+          <h2 class="title is-3">Dataset</h2>
+
+          <div class="image-container">
+            <div class="block">
+              <figure>
+                <img src="./static/images/multi-domain-data.png">
+                <figcaption>
+                  <strong style="font-size: 16px;">Multi-domain data</strong>
+                </figcaption>
+            </div>
+            <div class="block">
+              <img src="./static/images/multi-view-data.png">
+              <figcaption>
+                <strong style="font-size: 16px;">Multi-view data</strong>
+              </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/ Dataset -->
+    </div>
+  </section>
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{PWISeg,
+author = {Zhen Sun and Huan Xu and Jinlin Wu and Zhen Chen and Zhen Lei and Hongbin Liu},
+title = {PWISeg: Point-based Weakly-supervised Instance Segmentation for Surgical Instruments},
+journal = {arXiv preprint arXiv:?????},
+year = {2024},
+}
+</code></pre>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link" href="https://github.com/seanxuu" class="external-link" disabled>
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p>
+             Thanks for <strong>Nerfies</strong> provides<a href="https://github.com/nerfies/nerfies.github.io"> templete</a> of this website.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
