@@ -19,4 +19,5 @@ The dataset is divided into three parts:
 - Validation set: 200 images
 - Testing set: 185 images
 
-This structure is designed for comprehensive model training, fine-tuning, and unbiased evaluation of the model's performance on new data.
+## **Download Link**
+https://drive.google.com/drive/folders/1fVOj9PdCaNOHyEqCnbU-4FqSkSFisJGI?usp=sharing
