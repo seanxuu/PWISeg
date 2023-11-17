@@ -146,31 +146,10 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              In surgical procedures, correct instrument counting is essential. Instance segmentation is a key method
-              that identifies not only an object's bounding box but also each pixel's specific details. However,
-              obtaining mask-level annotations is labor-intensive in instance segmentation. To address this issue, we
-              propose a novel yet effective weakly-supervised surgical instrument instance segmentation approach, named
-              Point-based Weakly-supervised Instance Segmentation (PWISeg). PWISeg adopts an FCN-based architecture with
-              point-to-box and point-to-mask branches to model the relationships between feature points and bounding
-              boxes, as well as feature points and segmentation masks on FPN, accomplishing instrument detection and
-              segmentation tasks jointly in a single model. Since mask level annotations are hard to available in the
-              real world, for point-to-mask training, we introduce an unsupervised projection loss, utilizing the
-              projected relation between predicted masks and bboxes as supervision signal. On the other hand, we
-              annotate a few pixels as the key pixel for each instrument. Based on this, we further propose a key pixel
-              association loss and a key pixel distribution loss, driving the point-to-mask branch to generate more
-              accurate segmentation predictions.
+              In surgical procedures, correct instrument counting is essential. Instance segmentation is a location method that locates not only an object's bounding box but also each pixel's specific details. However, obtaining mask-level annotations is labor-intensive in instance segmentation. To address this issue, we propose a novel yet effective weakly-supervised surgical instrument instance segmentation approach, named Point-based Weakly-supervised Instance Segmentation (PWISeg). PWISeg adopts an FCN-based architecture with point-to-box and point-to-mask branches to model the relationships between feature points and bounding boxes, as well as feature points and segmentation masks on FPN, accomplishing instrument detection and segmentation jointly in a single model. Since mask level annotations are hard to available in the real world, for point-to-mask training, we introduce an unsupervised projection loss, utilizing the projected relation between predicted masks and bboxes as supervision signal. On the other hand, we annotate a few pixels as the key pixel for each instrument. Based on this, we further propose a key pixel association loss and a key pixel distribution loss, driving the point-to-mask branch to generate more accurate segmentation predictions. To comprehensively evaluate this task, we unveil a novel surgical instrument dataset with manual annotations, setting up a benchmark for further research. Our comprehensive research trial validated the superior performance of our PWISeg. The results show that the accuracy of surgical instrument segmentation is improved, surpassing most methods of instance segmentation via weakly supervised bounding boxes. This improvement is consistently observed in our proposed dataset and when applied to the public HOSPI-Tools dataset.
 
             </p>
-            <p>
-              To comprehensively evaluate this task, we unveil a novel surgical instrument dataset with manual
-              annotations, setting up a benchmark for further research.
-            </p>
-            <p>
-              Our comprehensive research trial validated the superior performance of our PWISeg. The results show that
-              the accuracy of surgical instrument segmentation is improved, surpassing most methods of instance
-              segmentation via weakly supervised bounding boxes. This improvement is consistently observed in our
-              proposed dataset and when applied to the public HOSPI-Tools dataset.
-            </p>
+
 
           </div>
         </div>
