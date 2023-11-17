@@ -3,11 +3,13 @@ This is the repository that contains source code for the [PWISeg website](https:
 
 If you find PWISeg useful for your work please cite:
 ```
-@article{PWISeg,
-author = {Zhen Sun and Huan Xu and Jinlin Wu and Zhen Chen and Zhen Lei and Hongbin Liu},
-title = {PWISeg: Point-based Weakly-supervised Instance Segmentation for Surgical Instruments},
-journal = {arXiv preprint arXiv:?????},
-year = {2024},
+@misc{sun2023pwiseg,
+      title={PWISeg: Point-based Weakly-supervised Instance Segmentation for Surgical Instruments}, 
+      author={Zhen Sun and Huan Xu and Jinlin Wu and Zhen Chen and Zhen Lei and Hongbin Liu},
+      year={2023},
+      eprint={2311.09819},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
 }
 ```
 
