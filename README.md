@@ -1,4 +1,7 @@
 # PWISeg: Point-based Weakly-supervised Instance Segmentation for Surgical Instruments
+![Static Badge](https://img.shields.io/badge/Paper-Arxiv-black?style=%20for-the-badge&logo=arxiv&logoColor=red&labelColor=hex&color=red&cacheSeconds=3600&link=https%3A%2F%2Farxiv.org%2Fabs%2F2311.09819)
+
+
 This is the repository that contains source code for the [PWISeg website](https://seanxuu.github.io/PWISeg) and the [Surgical Instruments Dataset](https://github.com/seanxuu/PWISeg/tree/main/dataset) we used. 
 
 If you find PWISeg useful for your work please cite:
