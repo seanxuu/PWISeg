@@ -4,7 +4,7 @@ This is the repository that contains source code for the [PWISeg website](https:
 
 
 ## Latest News 🎉
-\[2024/06\] Our paper has been accepted by ICIP 2024.
+\[2024/06\] Our paper has been accepted by [ICIP 2024](https://2024.ieeeicip.org/).
   
 ## Citation
 
